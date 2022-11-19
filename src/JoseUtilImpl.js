@@ -90,7 +90,7 @@ export default function getJoseUtil({ jws, KeyUtil, X509, crypto, hextob64u, b64
                 var lowerNow = now + clockSkew;
                 var upperNow = now - clockSkew;
 
-                if (!payload.iat) {
+                /*if (!payload.iat) {
                     Log.error("JoseUtil._validateJwt: iat was not provided");
                     return Promise.reject(new Error("iat was not provided"));
                 }
@@ -102,7 +102,7 @@ export default function getJoseUtil({ jws, KeyUtil, X509, crypto, hextob64u, b64
                 if (payload.nbf && lowerNow < payload.nbf) {
                     Log.error("JoseUtil._validateJwt: nbf is in the future", payload.nbf);
                     return Promise.reject(new Error("nbf is in the future: " + payload.nbf));
-                }
+                }*/
 
                 if (!payload.exp) {
                     Log.error("JoseUtil._validateJwt: exp was not provided");
